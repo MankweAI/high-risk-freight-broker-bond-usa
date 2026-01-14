@@ -1,0 +1,6 @@
+tier_id,min_score,max_score,product_recommendation,est_rate_range,est_premium_annual,approval_odds,collateral_requirement,compliance_warning,action_cta
+standard_excellent,750,850,BMC-84 Surety Bond,1.25% - 1.5%,"$938 - $1,125",Instant Approval,None,None,Get Standard Rate
+standard_good,700,749,BMC-84 Surety Bond,2.5% - 4%,"$1,875 - $3,000",High (24hr Review),None,None,Get Standard Rate
+high_risk_fair,650,699,BMC-84 Surety Bond (High Risk),5% - 7.5%,"$3,750 - $5,625",Moderate (Manual Underwriting),Possible (10-20%),Prepare 3 months bank statements.,Get High-Risk Quote
+high_risk_poor,600,649,BMC-84 Surety Bond (Distressed),8% - 15%,"$6,000 - $11,250",Low (Specialist Required),Likely (20-50%),High Rejection Risk. Do not apply with standard carriers.,Check Eligibility
+unbondable_critical,500,599,BMC-85 Trust Fund (Financed),N/A (Bond Declined),"$1,500 - $3,000 Down + Monthly",Guaranteed (Cash Funded),100% ($75k) or Financed Trust,CRITICAL: Must use 100% Liquid Cash Assets (2026 Rule). Avoid real-estate backed trusts.,Get Trust Fund Financing

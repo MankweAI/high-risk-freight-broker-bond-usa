@@ -1,0 +1,21 @@
+state_code,state_name,miller_threshold,statute_citation,bond_cost_min
+AL,Alabama,50000,"Ala. Code § 39-1-1",100
+AK,Alaska,100000,"Alaska Stat. § 36.25.010",150
+AZ,Arizona,100000,"Ariz. Rev. Stat. § 34-222",100
+AR,Arkansas,20000,"Ark. Code Ann. § 18-44-503",100
+CA,California,25000,"Cal. Civ. Code § 9550",100
+CO,Colorado,150000,"Colo. Rev. Stat. § 38-26-105",150
+CT,Connecticut,100000,"Conn. Gen. Stat. § 49-41",100
+FL,Florida,100000,"Fla. Stat. § 255.05",100
+GA,Georgia,100000,"Ga. Code Ann. § 13-10-60",100
+IL,Illinois,150000,"30 ILCS 550/1",100
+TX,Texas,25000,"Tex. Gov’t Code § 2253.021",100
+NY,New York,0,"N.Y. State Fin. Law § 137 (No Min)",100
+VA,Virginia,500000,"Va. Code Ann. § 2.2-4337",100
+WA,Washington,150000,"Wash. Rev. Code § 39.08.010",100
+MA,Massachusetts,150000,"Mass. Gen. Laws ch. 149 § 29",100
+PA,Pennsylvania,100000,"8 Pa. Cons. Stat. § 193.1",100
+OH,Ohio,100000,"Ohio Rev. Code § 153.54",100
+MI,Michigan,50000,"Mich. Comp. Laws § 129.201",100
+NJ,New Jersey,100000,"N.J. Stat. Ann. § 2A:44-143",100
+NC,North Carolina,300000,"N.C. Gen. Stat. § 44A-26",100

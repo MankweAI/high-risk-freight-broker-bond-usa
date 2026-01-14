@@ -1,0 +1,4 @@
+tier_name,base_rate_first_100k,base_rate_next_400k,base_rate_next_2m,credit_multiplier_bad,credit_multiplier_standard,credit_multiplier_excellent
+standard_class_b,25,15,10,2.5,1.0,0.8
+standard_class_a,20,12,8,2.5,1.0,0.8
+high_risk,40,30,25,1.0,1.0,1.0
