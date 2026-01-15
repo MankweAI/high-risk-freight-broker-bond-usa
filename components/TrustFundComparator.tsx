@@ -1,7 +1,11 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 import { ArrowRight, Lock, Unlock } from 'lucide-react';
+import LeadCaptureModal from './LeadCaptureModal';
 
 export default function TrustFundComparator() {
+    const [isModalOpen, setIsModalOpen] = useState(false);
     return (
         <div className="flex flex-col gap-4">
             {/* Option A: BMC-84 Bond */}
@@ -43,8 +47,11 @@ export default function TrustFundComparator() {
                     </li>
                 </ul>
 
-                <button className="w-full text-center py-3 rounded-xl bg-emerald-50 text-emerald-600 font-bold text-sm hover:bg-emerald-100 transition-colors">
-                    Get Bond Quote
+                <button
+                    onClick={() => setIsModalOpen(true)}
+                    className="w-full text-center py-3 rounded-xl bg-emerald-50 text-emerald-600 font-bold text-sm hover:bg-emerald-100 transition-colors"
+                >
+                    Request Rate Access
                 </button>
             </div>
 
@@ -74,6 +81,8 @@ export default function TrustFundComparator() {
                     Read Guide
                 </button>
             </div>
+
+            <LeadCaptureModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
         </div>
     );
 

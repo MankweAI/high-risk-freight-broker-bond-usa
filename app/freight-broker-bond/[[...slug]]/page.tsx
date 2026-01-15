@@ -10,6 +10,7 @@ import SemanticFAQ from '@/components/SemanticFAQ';
 import ExpertBio from '@/components/ExpertBio';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import RelatedScenarios from '@/components/RelatedScenarios';
+import ComplianceFooter from '@/components/ComplianceFooter';
 import { CheckCircle2, ShieldCheck, FileText } from 'lucide-react';
 
 // --- Static Generation ---
@@ -174,5 +175,3 @@ export default async function Page({ params }: { params: Promise<{ slug?: string
         </main>
     );
 }
-
-import ComplianceFooter from '@/components/ComplianceFooter';

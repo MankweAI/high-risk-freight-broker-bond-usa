@@ -32,9 +32,9 @@ export default function RiskAssessmentCard({ scenario }: Props) {
                     {getIcon()}
                 </div>
                 <div>
-                    <h3 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">Approval Odds</h3>
+                    <h3 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">Probability Analysis</h3>
                     <div className="text-2xl font-black text-gray-800 tracking-tight leading-none">
-                        {odds}
+                        Model Projection: {odds}
                     </div>
                 </div>
             </div>

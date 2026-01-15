@@ -3,6 +3,8 @@
 import React, { useState, useEffect } from 'react';
 import { BadgeCheck, AlertTriangle, Calculator, DollarSign, ArrowRight } from 'lucide-react';
 import { PageScenario } from '@/lib/data/generator';
+import CarrierBadges from './CarrierBadges';
+import LeadCaptureModal from './LeadCaptureModal';
 
 interface Props {
     initialScenario?: PageScenario;
@@ -16,6 +18,7 @@ export default function FreightBondCalculator({ initialScenario }: Props) {
     const [bondAmount, setBondAmount] = useState<number>(defaultAmount);
     const [creditScore, setCreditScore] = useState<number>(defaultCredit);
     const [result, setResult] = useState<{ minPremium: number; maxPremium: number; tier: string } | null>(null);
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
     // Auto-calculate on mount if scenario exists
     useEffect(() => {
@@ -127,8 +130,11 @@ export default function FreightBondCalculator({ initialScenario }: Props) {
                     </div>
                 )}
 
-                <button className="btn-primary w-full py-4 rounded-xl font-bold text-white flex justify-center items-center gap-2">
-                    Get Firm Quote <ArrowRight className="w-4 h-4" />
+                <button
+                    onClick={() => setIsModalOpen(true)}
+                    className="w-full text-center py-3 rounded-xl bg-emerald-50 text-emerald-600 font-bold text-sm hover:bg-emerald-100 transition-colors"
+                >
+                    Request Rate Access
                 </button>
 
                 <div className="text-center pt-2">
@@ -139,8 +145,8 @@ export default function FreightBondCalculator({ initialScenario }: Props) {
 
                 <CarrierBadges />
             </div>
+
+            <LeadCaptureModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
         </div>
     );
 }
-
-import CarrierBadges from './CarrierBadges';
