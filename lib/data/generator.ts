@@ -68,15 +68,15 @@ export function generateAllScenarios(): PageScenario[] {
                 faqs: [
                     {
                         question: `Can I get a freight broker bond with a ${tier.minScore} credit score?`,
-                        answer: `Yes, we have specialized programs for applicants with credit scores in the ${tier.minScore}-${tier.maxScore} range. While standard markets may decline these applications, our high-risk partners can approve you, typically with a premium between ${tier.baseRateEstimate[0]}% and ${tier.baseRateEstimate[1]}%.`
+                        answer: `Yes. Specialized programs are available for applicants with credit scores in the ${tier.minScore}-${tier.maxScore} range. While standard markets may decline these applications, the high-risk network can typically secure approval, typically with a premium between ${tier.baseRateEstimate[0]}% and ${tier.baseRateEstimate[1]}%.`
                     },
                     {
                         question: "Do I need to pay the full bond amount upfront?",
-                        answer: "No. You only pay an annual premium, which is a small percentage of the $75,000 bond amount. We also offer financing plans to split this premium into monthly payments."
+                        answer: "No. You only pay an annual premium, which is a small percentage of the $75,000 bond amount. Financing plans are also available to split this premium into monthly payments."
                     },
                     {
                         question: "Is this the same as BMC-85 Trust Fund?",
-                        answer: "No. A BMC-85 requires you to lock up $75,000 cash. This BMC-84 bond allows you to keep your capital and just pay the annual fee."
+                        answer: "No. A BMC-85 requires locking up $75,000 cash. This BMC-84 bond allows you to keep your capital and just pay the annual fee."
                     }
                 ],
                 relatedScenarios: [
@@ -95,8 +95,8 @@ export function generateAllScenarios(): PageScenario[] {
             type: 'legal',
             meta: {
                 title: `Freight Broker Bond with ${issue.label} | Approval Guide`,
-                description: `Can you get a freight broker bond with ${issue.label}? Yes, but requirements vary. Read our ${new Date().getFullYear()} underwriting guide.`,
-                h1: `Getting a BMC-84 Bond with ${issue.label}`
+                description: `Can you get a freight broker bond with ${issue.label}? Yes, but requirements vary. Read the ${new Date().getFullYear()} underwriting guide.`,
+                h1: `BMC-84 Bond Underwriting: ${issue.label}`
             },
             content: {
                 heroSubtitle: issue.description,
@@ -114,15 +114,15 @@ export function generateAllScenarios(): PageScenario[] {
                 faqs: [
                     {
                         question: `Does having a ${issue.label} disqualify me from being a freight broker?`,
-                        answer: `Not necessarily. While the FMCSA requires a $75k bond, private surety companies decide whether to bond you. For ${issue.label}, approval is ${issue.approvalStatus}. You may need to provide additional documentation${issue.requiresPlan ? ' such as proof of a repayment plan' : ''}.`
+                        answer: `Not necessarily. While the FMCSA requires a $75k bond, private surety companies decide whether to issue the bond. For ${issue.label}, approval is ${issue.approvalStatus}. Additional documentation${issue.requiresPlan ? ', such as proof of a repayment plan,' : ''} is often required.`
                     },
                     {
-                        question: "Will my bond cost more?",
+                        question: "Will the bond cost more?",
                         answer: "Likely yes. Because this is considered a higher risk category, underwriters usually require a higher premium (typically 5-12%) and may ask for collateral in severe cases."
                     },
                     {
-                        question: "How quickly can I get approved?",
-                        answer: "Standard applications are instant, but applications involving legal issues like ${issue.label} typically require a manual underwriter review, which takes 24-48 hours."
+                        question: "How quickly can approval be granted?",
+                        answer: "Standard applications are processed instantly, but applications involving legal issues like ${issue.label} typically require a manual underwriter review, which takes 24-48 hours."
                     }
                 ],
                 relatedScenarios: [
@@ -142,7 +142,7 @@ export function generateAllScenarios(): PageScenario[] {
             type: 'state',
             meta: {
                 title: `${state.name} Freight Broker Bond Cost | BMC-84 Requirements`,
-                description: `Freight Broker Bond requirements for ${state.name} residents. Low rates and instant approval valid for FMCSA.`,
+                description: `Join over ${state.brokerCount} freight brokers in ${state.name}. Low rates and instant approval valid for FMCSA.`,
                 h1: `${state.name} Freight Broker Bonds`
             },
             content: {
@@ -150,7 +150,7 @@ export function generateAllScenarios(): PageScenario[] {
                 estimatedRateRange: [1.0, 10.0], // Wide range for generic state page
                 approvalOdds: 'Varies',
                 bulletPoints: [
-                    `FMCSA Compliant in ${state.name}`,
+                    `Join ${state.brokerCount.toLocaleString()} ${state.name} Brokers`,
                     'Instant Approvals',
                     '$75k Bond'
                 ],
@@ -160,8 +160,12 @@ export function generateAllScenarios(): PageScenario[] {
                 },
                 faqs: [
                     {
-                        question: `Do I need a specific ${state.name} freight license?`,
-                        answer: `No, the Freight Broker Authority (MC Number) is a federal license issued by the FMCSA. However, as a business in ${state.name}, you must register your business entity (LLC/Corp) with the ${state.name} Secretary of State.`
+                        question: `Why do ${state.brokerCount.toLocaleString()} ${state.name} brokers choose BMC-84 over BMC-85?`,
+                        answer: `Most of the ${state.brokerCount} licensed brokers in ${state.name} choose the BMC-84 bond because it frees up capital. Instead of locking away $75,000 in a BMC-85 trust fund, you pay a small annual premium (often 1-3%) and keep your cash for operations.`
+                    },
+                    {
+                        question: `Does ${state.name} have specific state-level broker requirements?`,
+                        answer: `The FMCSA license is federal, so it covers you in ${state.name} and across state lines. However, you must maintain "Good Standing" with the ${state.name} Secretary of State to operate legally within the state.`
                     },
                     {
                         question: `Is the $75,000 bond requirement different in ${state.name}?`,
@@ -185,7 +189,7 @@ export function generateAllScenarios(): PageScenario[] {
                     type: 'combined',
                     meta: {
                         title: `${state.name} Freight Broker Bond for ${tier.label}`,
-                        description: `Bad credit freight broker bonds in ${state.name}. Get approved even with ${tier.label}.`,
+                        description: `Bad credit freight broker bonds in ${state.name}. Join ${state.brokerCount} active brokers.`,
                         h1: `${state.name} Freight Bonds: ${tier.label} Program`
                     },
                     content: {
@@ -204,7 +208,7 @@ export function generateAllScenarios(): PageScenario[] {
                         faqs: [
                             {
                                 question: `Can I get bonded in ${state.name} with ${tier.label}?`,
-                                answer: `Yes, we write high-risk bands in ${state.name} daily. Our program for ${tier.label} applicants typically offers rates between ${tier.baseRateEstimate[0]}% - ${tier.baseRateEstimate[1]}%.`
+                                answer: `Yes, we write high-risk bonds in ${state.name} daily. Our program for ${tier.label} applicants typically offers rates between ${tier.baseRateEstimate[0]}% - ${tier.baseRateEstimate[1]}%.`
                             },
                             {
                                 question: `Does ${state.name} require extra collateral?`,

@@ -24,6 +24,7 @@ export interface StateEntity {
   code: string; // 'TX'
   fmcsaFieldOffice?: string;
   isTopFreightState: boolean;
+  brokerCount: number;
 }
 
 // --- 1. Credit Tiers (The "Score" Dimension) ---
@@ -125,18 +126,16 @@ export const LEGAL_ISSUES: LegalIssue[] = [
 ];
 
 // --- 3. States (The "Geo" Dimension) ---
-// Simplified list for brevity, normally would include all 50
 export const STATES: StateEntity[] = [
-  { name: 'Texas', slug: 'texas', code: 'TX', isTopFreightState: true },
-  { name: 'California', slug: 'california', code: 'CA', isTopFreightState: true },
-  { name: 'Florida', slug: 'florida', code: 'FL', isTopFreightState: true },
-  { name: 'Georgia', slug: 'georgia', code: 'GA', isTopFreightState: true },
-  { name: 'Illinois', slug: 'illinois', code: 'IL', isTopFreightState: true },
-  { name: 'Ohio', slug: 'ohio', code: 'OH', isTopFreightState: false },
-  { name: 'Pennsylvania', slug: 'pennsylvania', code: 'PA', isTopFreightState: true },
-  { name: 'North Carolina', slug: 'north-carolina', code: 'NC', isTopFreightState: false },
-  { name: 'Michigan', slug: 'michigan', code: 'MI', isTopFreightState: false },
-  { name: 'Tennessee', slug: 'tennessee', code: 'TN', isTopFreightState: true },
-  { name: 'New York', slug: 'new-york', code: 'NY', isTopFreightState: false },
-  // ... Adding top 50 would be a bulk paste, starting with key states
+  { name: 'Texas', slug: 'texas', code: 'TX', isTopFreightState: true, brokerCount: 2800 },
+  { name: 'California', slug: 'california', code: 'CA', isTopFreightState: true, brokerCount: 3079 },
+  { name: 'Florida', slug: 'florida', code: 'FL', isTopFreightState: true, brokerCount: 2709 },
+  { name: 'Georgia', slug: 'georgia', code: 'GA', isTopFreightState: true, brokerCount: 1601 },
+  { name: 'Illinois', slug: 'illinois', code: 'IL', isTopFreightState: true, brokerCount: 2047 },
+  { name: 'Ohio', slug: 'ohio', code: 'OH', isTopFreightState: false, brokerCount: 1100 },
+  { name: 'Pennsylvania', slug: 'pennsylvania', code: 'PA', isTopFreightState: true, brokerCount: 890 },
+  { name: 'North Carolina', slug: 'north-carolina', code: 'NC', isTopFreightState: false, brokerCount: 680 },
+  { name: 'Michigan', slug: 'michigan', code: 'MI', isTopFreightState: false, brokerCount: 791 },
+  { name: 'Tennessee', slug: 'tennessee', code: 'TN', isTopFreightState: true, brokerCount: 750 },
+  { name: 'New York', slug: 'new-york', code: 'NY', isTopFreightState: false, brokerCount: 950 },
 ];

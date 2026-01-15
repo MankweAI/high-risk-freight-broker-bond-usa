@@ -169,6 +169,10 @@ export default async function Page({ params }: { params: Promise<{ slug?: string
                 </div>
 
             </div>
+
+            <ComplianceFooter state={scenario.context.state} />
         </main>
     );
 }
+
+import ComplianceFooter from '@/components/ComplianceFooter';

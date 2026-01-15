@@ -130,7 +130,17 @@ export default function FreightBondCalculator({ initialScenario }: Props) {
                 <button className="btn-primary w-full py-4 rounded-xl font-bold text-white flex justify-center items-center gap-2">
                     Get Firm Quote <ArrowRight className="w-4 h-4" />
                 </button>
+
+                <div className="text-center pt-2">
+                    <a href="/methodology" className="text-[10px] text-gray-400 hover:text-emerald-500 underline decoration-dotted underline-offset-2 transition-colors">
+                        View Calculation Logic
+                    </a>
+                </div>
+
+                <CarrierBadges />
             </div>
         </div>
     );
 }
+
+import CarrierBadges from './CarrierBadges';
